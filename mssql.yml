@@ -1,0 +1,13 @@
+version: '3'
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:latest
+    environment:
+     - ACCEPT_EULA=Y
+     - MSSQL_SA_PASSWORD=sqlPassword
+    ports:
+     - "1433:1433"
+    volumes:
+     - mssql-data:/var/opt/mssql
+volumes:
+  mssql-data:

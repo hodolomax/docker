@@ -1,0 +1,15 @@
+version: '3'
+services:
+  solr:
+    image: "solr:8"
+    ports:
+     - "8983:8983"
+    volumes:
+     - solr-data:/var/solr
+    entrypoint:
+    - bash
+    - "-c"
+    - "precreate-core core0; precreate-core core1; exec solr -Dsolr.clustering.enabled=true -m 2g  -f"
+
+volumes:
+  solr-data:
