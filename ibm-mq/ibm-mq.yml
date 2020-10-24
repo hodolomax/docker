@@ -8,6 +8,8 @@ services:
     environment:
     - LICENSE=accept
     - MQ_QMGR_NAME=QM1
-    - MQ_ADMIN_PASSWORD=art2015
+    - MQ_ADMIN_PASSWORD=passw0rd
     volumes:
-     - /home/memin/test/ibm-mq:/mnt/mqm
+     - ibmmq-data:/mnt/mqm
+volumes:
+  ibmmq-data:     
