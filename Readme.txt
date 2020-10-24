@@ -5,6 +5,8 @@ Docker Deployment Project
 - MsSql
 - Redis
 - Solr
+- Influxdb
+- IBM Mq
 
 
 
